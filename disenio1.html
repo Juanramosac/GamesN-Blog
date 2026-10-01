@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pixel y Palanca · Blog de videojuegos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#f6f4fb; --surface:#ffffff; --ink:#1b1536; --muted:#5d567a;
+  --pink:#d6246a; --teal:#0f8f7c; --line:#d9d4ea;
+  --display:'Bricolage Grotesque','Trebuchet MS',sans-serif;
+  --body:'Figtree','Segoe UI',Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#1b1536; --surface:#281f4d; --ink:#f2eefc; --muted:#b7afd9;
+    --pink:#ff5d8f; --teal:#2ee6c5; --line:#3a2f6b;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1b1536; --surface:#281f4d; --ink:#f2eefc; --muted:#b7afd9;
+  --pink:#ff5d8f; --teal:#2ee6c5; --line:#3a2f6b;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.6 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+/* Menú */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);border-bottom:2px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;min-height:64px}
+.logo{font:800 1.4rem var(--display);text-decoration:none;letter-spacing:-.02em}
+.logo span{color:var(--pink)}
+nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0}
+nav a{display:block;padding:8px 14px;border-radius:999px;text-decoration:none;font-weight:600}
+nav a:hover{background:var(--surface)}
+nav a[aria-current]{background:var(--ink);color:var(--bg)}
+.toggle{display:none;background:none;border:2px solid var(--ink);color:var(--ink);border-radius:8px;padding:6px 12px;font:600 1rem var(--body);cursor:pointer}
+@media (max-width:700px){
+  .toggle{display:block}
+  nav{display:none;width:100%}
+  nav.open{display:block;padding-bottom:12px}
+  nav ul{flex-direction:column}
+  .bar{flex-wrap:wrap}
+}
+
+/* Portada */
+.hero{padding:72px 0 48px}
+.hero h1{font:800 clamp(2.6rem,8vw,5.6rem)/.98 var(--display);letter-spacing:-.035em;margin:0 0 20px;max-width:12ch}
+.hero p{max-width:52ch;color:var(--muted);font-size:1.2rem;margin:0 0 28px}
+.btn{display:inline-block;background:var(--pink);color:#fff;font-weight:600;padding:12px 22px;border-radius:10px;text-decoration:none}
+.btn:hover{filter:brightness(1.08)}
+
+/* Juegos */
+.game{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:48px 0;border-top:2px solid var(--line)}
+.game:nth-of-type(even) .cover{order:2}
+.cover{aspect-ratio:4/3;border-radius:18px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:20px}
+.cover b{font:800 1.8rem/1 var(--display);color:#fff;position:relative;z-index:1;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+.c1{background:radial-gradient(circle at 75% 25%,#ffd36b 0 12%,transparent 13%),linear-gradient(160deg,#2b1b7a,#0d0a2e)}
+.c2{background:linear-gradient(135deg,transparent 48%,#0a3b36 49% 60%,transparent 61%),linear-gradient(200deg,#13b59d,#073a42)}
+.c3{background:radial-gradient(circle at 30% 70%,#ffb199 0 18%,transparent 19%),linear-gradient(20deg,#c2386b,#5b1a4f)}
+.meta{color:var(--teal);font-weight:600;margin:0 0 6px}
+.game h2{font:800 clamp(1.8rem,4vw,2.6rem)/1.05 var(--display);letter-spacing:-.025em;margin:0 0 12px}
+.game p{margin:0 0 16px;max-width:46ch}
+.game a.more{font-weight:600;color:var(--pink)}
+@media (max-width:700px){
+  .game{grid-template-columns:1fr;gap:20px}
+  .game:nth-of-type(even) .cover{order:0}
+}
+
+/* Contacto */
+.contact{padding:48px 0 64px;border-top:2px solid var(--line)}
+.contact h2{font:800 2rem var(--display);margin:0 0 8px;letter-spacing:-.02em}
+.contact p{color:var(--muted);margin:0 0 20px;max-width:50ch}
+
+/* Footer */
+footer{background:var(--ink);color:var(--bg)}
+.foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px;padding:48px 20px 24px}
+footer h3{font:800 1.1rem var(--display);margin:0 0 12px}
+footer ul{list-style:none;margin:0;padding:0}
+footer li{margin-bottom:8px}
+footer a{text-decoration:none;opacity:.85}
+footer a:hover{opacity:1;text-decoration:underline}
+footer p{margin:0;opacity:.8;max-width:34ch}
+.legal{border-top:1px solid rgba(128,128,160,.4);padding:16px 20px calc(16px + env(safe-area-inset-bottom,0px));font-size:.9rem;opacity:.8}
+@media (max-width:700px){.foot{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#inicio">Pixel<span>y</span>Palanca</a>
+    <button class="toggle" aria-expanded="false" aria-controls="menu">Menú</button>
+    <nav id="menu" aria-label="Principal">
+      <ul>
+        <li><a href="#inicio" aria-current="page">Inicio</a></li>
+        <li><a href="#nebula-drift">Nebula Drift</a></li>
+        <li><a href="#mazmorra-hueca">Mazmorra Hueca</a></li>
+        <li><a href="#pequeno-faro">Pequeño Faro</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="wrap hero" id="inicio">
+    <h1>Tres juegos, jugados a fondo.</h1>
+    <p>Aquí no hay listas interminables. Elegimos tres videojuegos, los terminamos y te contamos qué funciona, qué no y para quién es cada uno.</p>
+    <a class="btn" href="#nebula-drift">Empezar a leer</a>
+  </section>
+
+  <div class="wrap">
+    <article class="game" id="nebula-drift">
+      <div class="cover c1" role="img" aria-label="Portada ilustrada de Nebula Drift"><b>Nebula Drift</b></div>
+      <div>
+        <p class="meta">Carreras espaciales · PC y consolas</p>
+        <h2>Nebula Drift</h2>
+        <p>Pilota naves entre anillos de asteroides a toda velocidad. Escribe aquí tu reseña: controles, ritmo y qué lo hace distinto.</p>
+        <a class="more" href="#">Leer la reseña</a>
+      </div>
+    </article>
+
+    <article class="game" id="mazmorra-hueca">
+      <div class="cover c2" role="img" aria-label="Portada ilustrada de Mazmorra Hueca"><b>Mazmorra Hueca</b></div>
+      <div>
+        <p class="meta">Aventura de mazmorras · PC</p>
+        <h2>Mazmorra Hueca</h2>
+        <p>Explora cuevas que cambian en cada partida. Cuenta aquí qué te pareció la dificultad y la rejugabilidad.</p>
+        <a class="more" href="#">Leer la reseña</a>
+      </div>
+    </article>
+
+    <article class="game" id="pequeno-faro">
+      <div class="cover c3" role="img" aria-label="Portada ilustrada de Pequeño Faro"><b>Pequeño Faro</b></div>
+      <div>
+        <p class="meta">Puzles tranquilos · Móvil y consolas</p>
+        <h2>Pequeño Faro</h2>
+        <p>Un juego corto y relajado sobre cuidar un faro. Habla aquí de su historia, su música y cuánto dura.</p>
+        <a class="more" href="#">Leer la reseña</a>
+      </div>
+    </article>
+  </div>
+
+  <section class="wrap contact" id="contacto">
+    <h2>¿Qué juego analizamos después?</h2>
+    <p>Cuéntanos qué te gustaría leer y lo tendremos en cuenta para el próximo artículo.</p>
+    <a class="btn" href="mailto:hola@ejemplo.com">Escríbenos</a>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <h3>Pixel y Palanca</h3>
+      <p>Un blog sobre videojuegos, escrito por jugadores y para jugadores.</p>
+    </div>
+    <div>
+      <h3>Juegos</h3>
+      <ul>
+        <li><a href="#nebula-drift">Nebula Drift</a></li>
+        <li><a href="#mazmorra-hueca">Mazmorra Hueca</a></li>
+        <li><a href="#pequeno-faro">Pequeño Faro</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Síguenos</h3>
+      <ul>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Discord</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap legal">© 2026 Pixel y Palanca. Todos los derechos reservados.</div>
+</footer>
+
+<script>
+(function(){
+  var b=document.querySelector('.toggle'),n=document.getElementById('menu');
+  b.addEventListener('click',function(){
+    var o=n.classList.toggle('open');
+    b.setAttribute('aria-expanded',o);
+  });
+  n.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded','false');}
+  });
+})();
+</script>
+</body>
+</html>
