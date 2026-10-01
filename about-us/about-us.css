@@ -18,3 +18,15 @@ p{
     max-width: 800px;
     margin: 0 auto;
 }
+
+summary {
+    color: #0f8f7c;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+details {
+    max-width: 800px;
+    margin: 20px auto;
+}
