@@ -1,1 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Figtree:wght@400;600&display=swap');
 
+:root {
+    --bg: #1b1536;        
+    --surface: #281f4d;   
+    --ink: #f2eefc;       
+    --muted: #b7afd9;     
+    --pink: #ff5d8f;      
+    --teal: #2ee6c5;      
+    --line: #3a2f6b;      
+
+    --display: 'Bricolage Grotesque', 'Trebuchet MS', sans-serif;
+    --body: 'Figtree', 'Segoe UI', Arial, sans-serif; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.inicio {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 72px 20px 48px;
+}
+
+.resumen h2 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(2.6rem, 8vw, 5.6rem);
+    line-height: 1;
+    letter-spacing: -0.035em;
+    margin: 0 0 20px;
+    max-width: 12ch;
+}
+
+.resumen p {
+    color: var(--muted);
+    font-size: 1.2rem;
+    max-width: 52ch;
+    margin: 0 0 16px;
+}
+
+.boton {
+    margin-top: 12px;
+    background-color: var(--pink);
+    color: #fff;
+    font-family: var(--body);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    filter: brightness(1.1);
+}
+
+.juego {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 48px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    border-top: 2px solid var(--line);
+}
+
+.juego:nth-of-type(even) .imagen {
+    order: 2;
+}
+
+.imagen img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.article-text h3 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    margin: 0 0 12px;
+    color: var(--teal);
+}
+
+.article-text p {
+    margin: 0;
+    max-width: 46ch;
+}
+
+.final {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 48px 20px 64px;
+    border-top: 2px solid var(--line);
+}
+
+.final .resumen h2 {
+    font-size: 2rem;
+    max-width: none;
+}
+
+@media (max-width: 700px) {
+    .juego {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .juego:nth-of-type(even) .imagen {
+        order: 0;
+    }
+}
