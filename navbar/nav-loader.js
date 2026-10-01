@@ -1,7 +1,10 @@
 class Navbar extends  HTMLElement {
   async connectedCallback() {
-    const response = await fetch ('navbar/navbar.html');
-    this.innerHTML = await response.text();
+const navUrl = new URL('navbar.html', import.meta.url).href;
+      
+      const response = await fetch(navUrl);
+      if (!response.ok) throw new Error('No se pudo cargar navbar.html');
+      this.innerHTML = await response.text();
 
     //menu 
     const b =  this.querySelector('.toggle');
