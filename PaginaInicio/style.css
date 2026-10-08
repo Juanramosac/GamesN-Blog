@@ -233,13 +233,6 @@ nav a[aria-current] { background: var(--ink); color: var(--bg); }
   max-width: 400px;
 }
 
-h2 {
-  margin-top: 0;
-  color: black;
-  text-align: center;
-  font-size: 30px;
-}
-
 /* Campos de entrada */
 label {
   display: block;
