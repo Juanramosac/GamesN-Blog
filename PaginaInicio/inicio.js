@@ -46,7 +46,7 @@ function renderizarPublicidades() {
 	contenedor.className = "container my-5";
 	contenedor.innerHTML = `
 		<h2 class="mb-4">Publicidad</h2>
-		<div class="row g-4">
+		<div class="row">
 			${Object.values(publicidades).map((anuncio) => `
 				<div class="col">
 					<div class="card h-100 shadow-sm">
