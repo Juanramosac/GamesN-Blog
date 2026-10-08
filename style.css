@@ -1,0 +1,60 @@
+/* Paleta (5 colores) */
+:root {
+ --bg: #1b1536;      /* fondo morado oscuro */
+  --ink: #f2eefc;     /* texto principal (claro) */
+  --muted: #b7afd9;   /* texto secundario */
+  --pink: #ff5d8f;    /* color principal */
+  --teal: #2ee6c5;    /* color de acento */
+
+  /*  paleta a Bootstrap */
+--bs-body-bg: var(--bg);
+  --bs-body-color: var(--ink);
+  --bs-secondary-color: var(--muted);
+  --bs-border-color: rgba(183, 175, 217, .25);
+  --bs-body-font-family: 'Figtree', 'Segoe UI', Arial, sans-serif;
+
+    --bs-primary: var(--pink);
+  --bs-primary-rgb: 255, 93, 143;
+  --bs-link-color: var(--pink);
+  --bs-link-color-rgb: 255, 93, 143;
+  --bs-link-hover-color: #ff85ab;
+}
+
+/* Tipografía */
+h1, h2, h3, .navbar-brand { font-family: 'Bricolage Grotesque', 'Trebuchet MS', sans-serif; }
+h1 { color: var(--pink); }
+h2, h3 { color: var(--teal); }
+html { scroll-behavior: smooth; }
+
+/* Botón */
+.btn-primary {
+  --bs-btn-color: var(--bg);
+  --bs-btn-bg: var(--pink);
+  --bs-btn-border-color: var(--pink);
+  --bs-btn-hover-color: var(--bg);
+  --bs-btn-hover-bg: #ff85ab;
+  --bs-btn-hover-border-color: #ff85ab;
+}
+/* Navbar: bg blanco*/
+.navbar {
+  background-color: #ffffff;
+  --bs-navbar-color: var(--bg);              /* enlaces: morado oscuro */
+  --bs-navbar-hover-color: #d6246a;          /* hover: rosa más oscuro, se lee mejor sobre blanco */
+  --bs-navbar-active-color: #d6246a;
+  --bs-navbar-brand-color: var(--bg);
+  --bs-navbar-brand-hover-color: var(--bg);
+  --bs-border-color: rgba(27, 21, 54, .15);
+}
+
+.navbar .nav-link {
+  border-radius: 999px;
+  padding: 8px 14px;
+  transition: background-color .2s, color .2s;
+}
+
+.navbar .nav-link:hover {
+  background-color: rgba(214, 36, 106, .1);
+}
+
+/* Footer */
+footer { border-top: 1px solid var(--bs-border-color); }
