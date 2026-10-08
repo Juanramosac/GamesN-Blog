@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="inicio.css">
+    <link rel="stylesheet" href="../navbar/nav-style.css">
+    <link rel="stylesheet" href="../footer/footer.css">
+</head>
+<body>
+    <nav-bar></nav-bar>
+    <!-- <header class ="header">
+        <div class="contenedor barra">
+        <nav id="menu" class="menu">
+            <h1 class="logo">Games N</h1>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#valorant">Valorant</a></li>
+                <li><a href="#counterstrike">Counter Strike</a></li>
+                <li><a href="#callofduty">Call of Duty</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="quienes-somos.html">Quienes somos</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header> -->
+
+    <main>
+        <section id="inicio" class="inicio">
+            <div class="resumen">
+                <h2>Tres juegos, jugados a fondo.</h2>
+                <p>Explora el mundo de los videojuegos con nosotros. Descubre reseñas, noticias y mucho más.</p>
+                <p>Aquí no hay listas interminables. Elegimos tres videojuegos, los
+                terminamos y te contamos qué funciona, qué no y para quién es cada uno</p>
+                <button onclick="window.location.href='#valorant'" class="boton">Ver juegos</button>
+            </div>
+        </section>
+        <article id="valorant" class="juego">
+            <div class="imagen">
+                <img src="../img/valorant.jpg" alt="Imagen de Valorant">
+            </div>
+            <div class="article-text">
+            <h3>Valorant</h3>
+            <p>Valorant es un juego de disparos en primera persona desarrollado por Riot Games. Combina elementos 
+                de estrategia y habilidades únicas de los personajes, ofreciendo una experiencia competitiva intensa.</p>
+            </div>
+        </article>
+
+        <article id="counterstrike" class="juego">
+            <div class="imagen">
+                <img src="../img/counterstrike.jpg" alt="Imagen de Counter Strike">
+            </div>
+            <div class="article-text">
+            <h3>Counter Strike</h3>
+            <p>Counter Strike es un juego de disparos en primera persona que se centra en el combate entre equipos. 
+                Los jugadores asumen roles de terroristas o antiterroristas, completando objetivos y eliminando al equipo contrario.</p>
+            </div>
+        </article>
+
+        <article id="callofduty" class="juego">
+            <div class="imagen">
+                <img src="../img/callofduty.jpg" alt="Imagen de Call of Duty">
+            </div>
+            <div class="article-text">
+            <h3>Call of Duty</h3>
+            <p>Call of Duty es una serie de videojuegos de disparos en primera persona que abarca diversos conflictos bélicos. 
+                Con campañas cinematográficas y modos multijugador, ofrece una experiencia intensa y realista.</p>
+            </div>
+        </article>
+        <section id="final" class="final">
+            <div class="resumen">
+                <h2>Explora más sobre estos juegos</h2>
+                <p>Sumérgete en el mundo de Valorant, Counter Strike y Call of Duty. Descubre estrategias, noticias y mucho más.</p>
+                <button onclick="window.location.href='../pagina-contacto/contacto.html'" class="boton">Contáctanos</button>
+            </div>
+        </section>
+    </main>
+    <custom-footer></custom-footer>
+
+    <script type="module" src="../footer/footer-loader.js"></script>
+    <script  type="module" src="../navbar/nav-loader.js"></script>
+
+    <script src="inicio.js"></script>
+</body>
+</html>
