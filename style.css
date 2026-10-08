@@ -58,3 +58,69 @@ html { scroll-behavior: smooth; }
 
 /* Footer */
 footer { border-top: 1px solid var(--bs-border-color); }
+
+/* =========================
+   Página de Inicio
+   ========================= */
+
+.resumen h2 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(2.6rem, 8vw, 5.6rem);
+    line-height: 1;
+    letter-spacing: -0.035em;
+    margin: 0 0 20px;
+    max-width: 12ch;
+}
+
+.resumen p {
+    color: var(--muted);
+    font-size: 1.2rem;
+    max-width: 52ch;
+    margin: 0 0 16px;
+}
+
+.juego {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 48px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    border-top: 2px solid var(--line);
+}
+
+.article-text h3 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    margin: 0 0 12px;
+    color: var(--teal);
+}
+
+.article-text p {
+    margin: 0;
+    max-width: 46ch;
+}
+
+.final {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 48px 20px 64px;
+    border-top: 2px solid var(--line);
+}
+
+.final .resumen h2 {
+    font-size: 2rem;
+    max-width: none;
+}
+
+@media (max-width: 700px) {
+    .juego {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
