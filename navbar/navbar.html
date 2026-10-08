@@ -1,11 +1,27 @@
-<div class="wrap bar">
-  <a class="logo" href="../PaginaInicio/inicio.html">Games N<span> - </span> Blog de Noticias</a>
-  <button class="toggle" aria-expanded="false" aria-controls="menu">Menú</button>
-  <nav id="menu" aria-label="Principal">
-    <ul>
-      <li><a href="../PaginaInicio/inicio.html">Inicio</a></li>
-      <li><a href="../about-us/about-us.html">Quienes Somos</a></li>
-      <li><a href="../pagina-contacto/contacto.html">Contacto</a></li>
-    </ul>
-  </nav>
-</div>
+<nav class="navbar navbar-expand-md sticky-top border-bottom" 
+data-bs-theme="light">
+    <div class="container">
+    <a class="navbar-brand fw-bold" href="../PaginaInicio/inicio.html">
+      Games N<span class="text-primary"> - </span> Blog de Noticias
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="../PaginaInicio/inicio.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../about-us/about-us.html">Quienes Somos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../pagina-contacto/contacto.html">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
